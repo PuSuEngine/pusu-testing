@@ -41,3 +41,11 @@ The `pusud` -API is going to be available at
 `127.0.0.1:55000` inside the VM, and 
 `http://172.20.20.20:80/pusu` outside it.
 
+
+## Status
+
+This is still incomplete.
+
+For frontend you will have to manually install a production build of `jspusu` to `frontend/www/lib/pusu.js`, and copy `frontend/src/*` to `frontend/www`.
+
+For Python backend you will need to copy the `pypusu` module in the `python-backend/pypusu` -directory so `import pypusu` works in the `python-backend` -directory.
