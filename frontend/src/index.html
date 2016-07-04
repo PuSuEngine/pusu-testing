@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="lib/pusu.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div>Status: <span id="status">Loading</span></div>
+    <ul>
+        <li>Python time: <span id="pytime">No data yet</span></li>
+        <li>Go time: <span id="gotime">No data yet</span></li>
+    </ul>
+</section>
+<script>
+    var config = {
+        pusud: "ws://" + window.location.host + "/pusu",
+    };
+
+    var pytime = document.getElementById("pytime");
+    var gotime = document.getElementById("gotime");
+    var status = document.getElementById("status");
+
+    function setText(e, text) {
+        e.innerText = e.textContent = text;
+    }
+
+    function setStatus(text) {
+        setText(status, text);
+    }
+
+    setStatus("Starting");
+
+    var c = new PuSu(config.pusud);
+    c.connect().promise.then(function () {
+        setStatus("Connected");
+        c.authorize("").promise.then(function () {
+            setStatus("Authorized");
+            c.subscribe("time.py", function (msg) {
+                setText(pytime, msg)
+            });
+            c.subscribe("time.go", function (msg) {
+                setText(gotime, msg)
+            });
+            setStatus("Subscriptions started");
+        });
+    });
+</script>
+</body>
+</html>

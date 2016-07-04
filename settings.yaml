@@ -5,7 +5,8 @@ relays:
 client_port: 55000
 network_port: 55001
 allowed_channels:
-  - users.*
+  - time.*
+  - custom.*
 jwt_signing_algorithms:
   - HS256
 jwt_verification_key: secret

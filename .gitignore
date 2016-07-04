@@ -1,3 +1,6 @@
 gopath
 .vagrant
 .idea
+go-backend/backend
+*.pyc
+frontend/src/lib/

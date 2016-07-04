@@ -28,8 +28,10 @@ vagrant up
 With that, your environment will be automatically prepared,
 for those parts where it makes sense. 
 
-The `pusud` -repository will be cloned to the `pusud`
--folder in case you want to make local changes to it.
+The `pusud` and `gopusu` -repositories will be cloned under
+the `gopath` -folder as dependencies for things and will
+show up in the source directory outside the VM in case you
+want to make local changes.
 
 You will need to compile the web-client to `frontend/www`
 yourself if you want to try that out. After building it
