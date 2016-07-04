@@ -1,6 +1,7 @@
 include:
   - golang
   - git
+  - supervisor
 
 /etc/supervisor/conf.d/pusud.conf:
   file.managed:

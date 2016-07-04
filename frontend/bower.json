@@ -1,0 +1,6 @@
+{
+  "name": "pusu-frontend-test",
+  "dependencies": {
+    "pusu": "^1.0.0"
+  }
+}

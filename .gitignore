@@ -4,3 +4,4 @@ gopath
 go-backend/backend
 *.pyc
 frontend/src/lib/
+frontend/www/

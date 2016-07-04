@@ -6,6 +6,9 @@ applications using [gopusu](https://github.com/PuSuEngine/gopusu) and
 [pypusu](https://github.com/PuSuEngine/pypusu).
 
 
+Everything in this repo is licensed with the MIT and new BSD licenses.
+
+
 ## Requirements
 
  * [Vagrant](https://www.vagrantup.com/downloads.html)
@@ -46,6 +49,6 @@ The `pusud` -API is going to be available at
 
 This is still incomplete.
 
-For frontend you will have to manually install a production build of `jspusu` to `frontend/www/lib/pusu.js`, and copy `frontend/src/*` to `frontend/www`.
-
-For Python backend you will need to copy the `pypusu` module in the `python-backend/pypusu` -directory so `import pypusu` works in the `python-backend` -directory.
+Make sure you have bower installed (`npm install -g bower`) and go to the
+`frontend` -directory, then copy everything from the `src` directory to `www`
+and run `bower install` to install the dependencies.
